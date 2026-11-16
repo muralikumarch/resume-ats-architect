@@ -1,0 +1,71 @@
+// Core keyword dictionary + acronym/synonym expansion map
+
+export const TECH_KEYWORDS_DICTIONARY: string[] = [
+  'Java', 'Java 21', 'Java 8', 'J2EE', 'Spring Boot', 'Spring', 'Spring Security',
+  'Microservices', 'RESTful APIs', 'REST APIs', 'SOAP', 'Python', 'FastAPI',
+  'LangChain', 'CrewAI', 'Agentic', 'Generative AI', 'LLM', 'RAG', 'Vector Databases',
+  'Semantic Search', 'Amazon Bedrock', 'AWS Bedrock', 'Azure OpenAI', 'Azure AI',
+  'Vertex AI', 'OpenAI', 'Angular', 'React', 'TypeScript', 'JavaScript', 'Flutter',
+  'AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'EKS', 'AKS', 'GKE', 'Lambda',
+  'API Gateway', 'S3', 'RDS', 'Kafka', 'Redis', 'PostgreSQL', 'MySQL', 'Oracle',
+  'Hibernate', 'JPA', 'OAuth 2.0', 'JWT', 'OIDC', 'RBAC', 'OWASP', 'CI/CD',
+  'Azure DevOps', 'GitHub Actions', 'Jenkins', 'TDD', 'JUnit', 'Mockito', 'SonarQube',
+  'GitHub Copilot', 'Claude Code', 'Power Platform', 'Copilot Studio', 'Banking',
+  'Payments', 'Fintech', 'Healthcare', 'Clinical', 'GxP', 'Agile', 'Terraform',
+  'Serverless', 'Event-Driven', 'Circuit Breakers', 'GraphQL', 'gRPC', 'Elasticsearch',
+  'MongoDB', 'DynamoDB', 'Cassandra', 'Neo4j', 'Prometheus', 'Grafana', 'Jaeger',
+  'OpenTelemetry', 'Istio', 'Helm', 'ArgoCD', 'Tekton', 'Ansible', 'Pulumi',
+  'Datadog', 'New Relic', 'Splunk', 'ELK Stack', 'Kibana', 'React Native', 'Next.js',
+  'Node.js', 'Go', 'Rust', 'Scala', 'Kotlin', 'C#', '.NET', 'CUDA', 'MLflow',
+  'Kubeflow', 'Airflow', 'Spark', 'Flink', 'Databricks', 'Snowflake',
+];
+
+// Acronym and synonym expansion map
+// Key = how it appears in JD | Values = what might appear in resume
+export const SYNONYM_MAP: Record<string, string[]> = {
+  'AWS': ['Amazon Web Services', 'Amazon Cloud'],
+  'GCP': ['Google Cloud Platform', 'Google Cloud'],
+  'Azure': ['Microsoft Azure'],
+  'K8s': ['Kubernetes'],
+  'Kubernetes': ['K8s'],
+  'CI/CD': ['CI CD', 'Continuous Integration', 'Continuous Delivery', 'Continuous Deployment', 'DevOps pipeline'],
+  'ML': ['Machine Learning'],
+  'AI': ['Artificial Intelligence'],
+  'LLM': ['Large Language Model', 'Large Language Models'],
+  'RAG': ['Retrieval Augmented Generation', 'Retrieval-Augmented Generation'],
+  'NLP': ['Natural Language Processing'],
+  'TDD': ['Test-Driven Development', 'Test Driven Development'],
+  'DDD': ['Domain-Driven Design', 'Domain Driven Design'],
+  'OIDC': ['OpenID Connect'],
+  'JWT': ['JSON Web Token', 'JSON Web Tokens'],
+  'RBAC': ['Role-Based Access Control', 'Role Based Access Control'],
+  'OAuth 2.0': ['OAuth2', 'OAuth 2'],
+  'REST APIs': ['RESTful APIs', 'RESTful API', 'REST API'],
+  'RESTful APIs': ['REST APIs', 'REST API'],
+  'Spring Boot': ['SpringBoot'],
+  'J2EE': ['Java EE', 'Jakarta EE', 'Java Enterprise Edition'],
+  'Generative AI': ['GenAI', 'Gen AI'],
+  'Vector Databases': ['Vector DB', 'Vector Store', 'Embeddings'],
+  'Agentic': ['AI Agents', 'Autonomous Agents', 'Agentic AI'],
+  'Event-Driven': ['Event Driven', 'Event-Driven Architecture', 'EDA'],
+  'Circuit Breakers': ['Circuit Breaker pattern', 'Resilience patterns'],
+  'Microservices': ['Microservice Architecture', 'Micro-services'],
+  'DevOps': ['Dev Ops', 'Development Operations'],
+  'GxP': ['Good Practice', 'GxP regulations', 'GxP compliance'],
+  'API Gateway': ['API Management', 'APIM'],
+  'Power Platform': ['Microsoft Power Platform', 'PowerApps', 'Power Automate'],
+  'Copilot Studio': ['Microsoft Copilot Studio', 'Power Virtual Agents'],
+  'GitHub Copilot': ['Copilot', 'AI coding assistant'],
+  'Claude Code': ['Anthropic Claude', 'Claude AI'],
+};
+
+// Words to ignore when extracting custom tokens from JD
+export const IGNORE_WORDS = new Set([
+  'The', 'And', 'For', 'With', 'Key', 'Requirements', 'Seeking', 'Looking',
+  'Experience', 'Strong', 'Deep', 'Proven', 'We', 'Are', 'Our', 'In', 'To', 'Of',
+  'At', 'Or', 'An', 'On', 'As', 'Is', 'It', 'Be', 'By', 'If', 'Do', 'But',
+  'Not', 'New', 'Using', 'You', 'Can', 'Has', 'Will', 'About', 'Than',
+  'More', 'This', 'That', 'From', 'Also', 'Such', 'Both', 'Each', 'Join',
+  'Work', 'Lead', 'Team', 'Role', 'Core', 'Must', 'Good', 'Well', 'High',
+  'Use', 'Used', 'Plus', 'Nice', 'Have', 'Year', 'Years', 'Hire',
+]);
